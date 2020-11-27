@@ -4,8 +4,13 @@ import { Transaction } from './Transaction';
 
 export const AddTrsansacction = () => {
     const [text, setText] = useState('');
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState('');
     const {addTransacction} = useContext(GlobalContext)
+
+    const limpiarForm = () => {
+        setAmount('');
+        setText('');
+    }
 
     const onSubmit =(e) => {
         e.preventDefault()
@@ -16,6 +21,7 @@ export const AddTrsansacction = () => {
             text
         }
         addTransacction(newTransaction);
+        limpiarForm()        
     }
     return (
         <>
