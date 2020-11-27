@@ -23,7 +23,7 @@ export const GlobalProvider = ({ children }) => {
             const res = await axios.get('/api/v1/transactions');
             dispatch({
                 type: 'GET_TRANSACTIONS',
-                payload: res.data.data
+                payload: res.data.data,
             });
         } catch (error) {
             dispatch({
