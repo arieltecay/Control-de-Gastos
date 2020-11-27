@@ -4,6 +4,7 @@ import { IncomeExpenses } from './components/IncomeExpenses'
 import { TransactionList } from './components/TransactionList'
 import { AddTrsansacction } from './components/AddTrsansacction'
 import { GlobalProvider } from './context/GlobalState'
+import {Recibo} from './components/Recibo'
 import './App.css';
 
 function App() {
@@ -14,8 +15,9 @@ function App() {
         <div className='container'>
           <Balance />
           <IncomeExpenses />
+            <AddTrsansacction />
           <TransactionList />
-          <AddTrsansacction />
+          <Recibo/>
         </div>
       </div>
     </GlobalProvider>
